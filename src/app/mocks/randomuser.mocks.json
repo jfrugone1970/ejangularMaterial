@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Budimir",
+        "last": "Shunevich"
+      },
+      "location": {
+        "street": {
+          "number": 747,
+          "name": "Todosya Osmachki"
+        },
+        "city": "Romni",
+        "state": "Sumska",
+        "country": "Ukraine",
+        "postcode": 79297,
+        "coordinates": {
+          "latitude": "76.8291",
+          "longitude": "-169.1029"
+        },
+        "timezone": {
+          "offset": "+10:00",
+          "description": "Eastern Australia, Guam, Vladivostok"
+        }
+      },
+      "email": "budimir.shunevich@example.com",
+      "login": {
+        "uuid": "1fe1abbc-820b-4b96-96ad-42894235dbf2",
+        "username": "purplesnake367",
+        "password": "gabriela",
+        "salt": "FicRSKzu",
+        "md5": "f373b6755fa7c32e9f906308eddff809",
+        "sha1": "2682a636ee6bf35dfabe5088aada6acdb6980af6",
+        "sha256": "51a0f4be26f7805e39ab1eec7e44c55ce5aa60fc7e4240dae6f66742b29fb996"
+      },
+      "dob": {
+        "date": "1951-12-20T09:38:50.683Z",
+        "age": 71
+      },
+      "registered": {
+        "date": "2012-11-03T17:56:19.223Z",
+        "age": 10
+      },
+      "phone": "(067) E23-8791",
+      "cell": "(066) G85-5230",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/56.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/56.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/56.jpg"
+      },
+      "nat": "UA"
+    }
+  ],
+  "info": {
+    "seed": "6027b0a3c3ab35ef",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
