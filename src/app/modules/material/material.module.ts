@@ -19,6 +19,7 @@ import { NavComponent } from './nav/nav.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatSortModule } from '@angular/material/sort';
 import { ArbolComponent } from './arbol/arbol.component';
 import { MatTreeModule } from '@angular/material/tree';
@@ -56,6 +57,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatDialogModule,
     MatTableModule,
     MatPaginatorModule,
+    MatProgressSpinnerModule,
     MatSortModule,
     MatTreeModule,
     DragDropModule,
@@ -66,10 +68,14 @@ import { MatMenuModule } from '@angular/material/menu';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatCardModule,
     MatDatepickerModule,
     MatDialogModule,
     MatNativeDateModule,
+    MatTableModule,
     // Formulario de direcciones
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
     ComponentsComponent,
     NavComponent,
     TablaComponent,

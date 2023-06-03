@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { IRandomContact, Results } from 'src/app/models/random.user';
+import { RandomUserService } from 'src/app/services/random-user.service';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +10,27 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private _route: Router) {}
+  public randomContact: IRandomContact[] = [];
+
+  constructor(private _route: Router,
+              private _irandomuserservice: RandomUserService) {}
 
   ngOnInit(): void {
+
+    this._irandomuserservice.obtenerRandomUser().subscribe(
+      {
+        next: (response: Results) => {
+          console.log(response);
+
+          response.results.forEach((randomContact: IRandomContact, index: number) => {
+            this.randomContact.push(randomContact);
+
+          })
+        },
+        error: (error) => console.log(`${error}`),
+        complete: () => console.info('Peticion de random constact terminado')
+      }
+     )
 
   }
 
@@ -62,6 +82,20 @@ export class HomeComponent implements OnInit {
   iraModal() {
 
     this._route.navigate(['modal']);
+
+  }
+
+  iraCardRandom() {
+
+    let navigationExtras: NavigationExtras = {
+      state: {
+        data: this.randomContact
+      },
+
+    }
+
+    this._route.navigate(['/card-random'], navigationExtras);
+
 
   }
 

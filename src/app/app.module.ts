@@ -15,11 +15,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { CardrandomComponent } from './components/cardrandom/cardrandom.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    CardrandomComponent
 
   ],
   imports: [

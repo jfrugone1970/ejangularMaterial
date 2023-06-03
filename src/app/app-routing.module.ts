@@ -9,6 +9,7 @@ import { HomeComponent } from './modules/material/components/home/home.component
 import { DragDropComponent } from './modules/material/components/drag-drop/drag-drop.component';
 import { DashboardComponent } from './modules/material/components/dashboard/dashboard.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { CardrandomComponent } from './components/cardrandom/cardrandom.component';
 
 
 const routes: Routes = [
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'modal',
     component: DialogComponent
+  },
+  {
+    path: 'card-random',
+    component: CardrandomComponent
   }
 
 
