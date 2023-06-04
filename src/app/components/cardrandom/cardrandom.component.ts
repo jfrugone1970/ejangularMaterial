@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 })
 export class CardrandomComponent implements OnInit {
 
-
   @Input() randomContact: IRandomContact | undefined;
 
   constructor(private _irandomuserservice: RandomUserService,
@@ -20,17 +19,22 @@ export class CardrandomComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+    if(history.state.data){
+      console.log(history.state.data);
+      this.randomContact = history.state.data;
+    }
 
   }
 
   regresarAHome() {
 
-     this._irouter.navigate(['home']);
+    this._irouter.navigate(['home']);
 
 
   }
 
 
 
+
 }
+
