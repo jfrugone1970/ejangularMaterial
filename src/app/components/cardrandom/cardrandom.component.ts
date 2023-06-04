@@ -35,6 +35,27 @@ export class CardrandomComponent implements OnInit {
 
   }
 
+  otroUsuario() {
+
+    // Otro Usuario
+    this._irandomuserservice.obtenerRandomUser().subscribe(
+      {
+        next: (response: Results) => {
+          console.log(response);
+
+          response.results.forEach((randomContact: IRandomContact, index: number) => {
+            this.randomContact = randomContact;
+
+          })
+        },
+        error: (error) => console.log(`${error}`),
+        complete: () => console.info('Peticion de random constact terminado')
+      }
+     )
+
+
+  }
+
 
 
 
