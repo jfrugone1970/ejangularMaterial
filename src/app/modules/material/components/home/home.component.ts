@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IRandomContact, Results } from 'src/app/models/random.user';
 import { RandomUserService } from 'src/app/services/random-user.service';
 import { NavigationExtras, Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  public randomContact: IRandomContact[] = [];
+  @Input() randomContact: IRandomContact | undefined;
 
   constructor(private _route: Router,
               private _irandomuserservice: RandomUserService) {}
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
           console.log(response);
 
           response.results.forEach((randomContact: IRandomContact, index: number) => {
-            this.randomContact.push(randomContact);
+            this.randomContact = randomContact;
 
           })
         },
@@ -86,6 +86,7 @@ export class HomeComponent implements OnInit {
   }
 
   iraCardRandom() {
+
 
     let navigationExtras: NavigationExtras = {
       state: {

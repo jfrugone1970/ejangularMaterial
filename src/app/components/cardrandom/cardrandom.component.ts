@@ -22,7 +22,9 @@ export class CardrandomComponent implements OnInit {
     if(history.state.data){
       console.log(history.state.data);
       this.randomContact = history.state.data;
+
     }
+
 
   }
 
